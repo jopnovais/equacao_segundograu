@@ -14,7 +14,7 @@ public class Equacao {
     }
 
     /**
-     * Construtor com argumento.
+     * Construtor com argumento
      *
      * @param valorA Um valor real.
      * @param valorB Um valor real.

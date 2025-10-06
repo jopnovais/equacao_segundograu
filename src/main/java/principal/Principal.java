@@ -1,7 +1,5 @@
 package principal;
-
 import javax.swing.JOptionPane;
-
 import equacao.Equacao;
 
 public class Principal {
