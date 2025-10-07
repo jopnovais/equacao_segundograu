@@ -53,22 +53,23 @@ public class Equacao {
     /**
      * Realiza o cálculo do delta.
      * 
-     * @return Um real com o delta da equacao
+     * @return Um real com o delta da equação.
      */
     public double getDelta() {
-        //Cálculo delta      
-        return Double.NaN;
+        return (valorB * valorB) - (4 * valorA * valorC);
     }
 
-    
     /**
      * Retorna a primeira raiz.
      *
      * @return Um real com a primeira raiz.
      */
     public double getRaiz1() {
-        //Cálculo x1  
-        return 0;
+        double delta = getDelta();
+        if (delta < 0) {
+            return Double.NaN;
+        }
+        return (-valorB + Math.sqrt(delta)) / (2 * valorA);
     }
     
     /**
@@ -77,7 +78,10 @@ public class Equacao {
      * @return Um real com a segunda raiz.
      */
     public double getRaiz2() {
-        //Cálculo x2  
-        return 0;
+        double delta = getDelta();
+        if (delta < 0) {
+            return Double.NaN;
+        }
+        return (-valorB - Math.sqrt(delta)) / (2 * valorA);
     }
 }
